@@ -1,43 +1,45 @@
-# Simulated Annealing(SA):
-- Inspirado na termodinâmica  
-- Começa com uma solução inicial  
-- Avalia o custo (ou energia) da solução  
-- Gera uma solução vizinha  
-- Decide se aceita a nova solução  
-- Reduz gradualmente a temperatura  
-- Repete o processo até um critério de parada  
-- Retorna a melhor solução encontrada  
+## Simulated Annealing (SA)
 
----
+- Inspired by thermodynamics  
+- Starts with an initial solution  
+- Evaluates the cost (or energy) of the solution  
+- Generates a neighboring solution  
+- Decides whether to accept the new solution  
+- Gradually reduces the temperature  
+- Repeats the process until a stopping criterion is met  
+- Returns the best solution found  
 
-# Obijetivo:
-Nesse projeto tento solucionar um problema real de algumas faculdade em relação ao laboratorio de informatica utilizando SA
-objetivos:
--  Diminuir a demanda desnecessaria organizando as materias por prioridades
--  O código aloca disciplinas nos laboratórios disponíveis considerando suas restrições
--  O algoritmo busca alocar disciplinas de maior prioridade antes das outras
--  Evita horarios vagos focando ao maximo utilizar os laboratorios de alguma forma 
--  Busca encontrar uma melhor combinação de alocação para minimizar o "custo" (que, neste caso, representa a soma das prioridades das disciplinas)
--  Explora diferentes possibilidades de alocação para tentar encontrar uma solução melhor
+---  
 
----
+## Objective  
+This project aims to solve a real-world issue faced by some universities regarding the allocation of computer labs using SA.    
+- Reduce unnecessary demand by prioritizing course allocations  
+- Allocate courses to available labs while considering constraints  
+- Assign higher-priority courses before lower-priority ones  
+- Minimize idle time, ensuring maximum lab utilization  
+- Find an optimal allocation that minimizes the "cost" (defined as the sum of course priorities)  
+- Explore different allocation possibilities to find better solutions  
 
-# Comportamento:
--  Gera uma solução inicial  
-Classifica as disciplinas e faz uma alocação inicial simples nos laboratórios
--  Calcula o custo da solução  
-O custo é baseado na soma das prioridades das disciplinas alocadas
-- Explora vizinhos (possíveis soluções alternativas)  
-- Decide se aceita uma nova solução  
-Se a nova soluçao tiver menor custo aceita automaticamente
-Se a solução for pior pode aceitá-la com uma certa probabilidade para evitar ficar preso em um resultado ruim
-- Reduz a temperatura gradualmente (Simulated Annealing)  
-A ideia é permitir mudanças no início e depois se tornar mais seletivo, refinando a solução
-- Exibe a tabela final com a melhor alocação encontrada  
+---  
 
----
+## Behavior  
 
-# Resultado:
-- Todos os horários dos laboratórios devem estar preenchidos
-- Disciplinas de maior prioridade são alocadas primeiro
-- A solução final é otimizada para minimizar o "custo" baseado nas prioridades  
+- **Generates an initial solution**  
+  - Sorts courses by priority and assigns them to labs using a simple initial allocation  
+- **Calculates the solution cost**  
+  - The cost is based on the sum of priorities of the allocated courses  
+- **Explores neighboring solutions (alternative allocations)**  
+- **Decides whether to accept a new solution**  
+  - If the new solution has a lower cost, it is automatically accepted  
+  - If the new solution is worse, it may still be accepted with a certain probability to avoid getting stuck in local optima  
+- **Gradually reduces the temperature (Simulated Annealing)**  
+  - Initially allows more changes and gradually becomes more selective to refine the solution  
+- **Displays the final schedule with the best-found allocation**  
+
+---  
+
+## Results  
+
+- All lab time slots are fully utilized  
+- Higher-priority courses are allocated first  
+- The final solution is optimized to minimize the "cost" based on course priorities 
